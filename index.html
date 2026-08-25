@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollywood Song Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Bollywood Song Player</h1>
+            <p class="subtitle">Your favorite Bollywood hits</p>
+        </header>
+
+        <div class="player-section">
+            <!-- Album Art -->
+            <div class="album-art">
+                <img id="albumArt" src="https://via.placeholder.com/300?text=Bollywood" alt="Album Art">
+            </div>
+
+            <!-- Song Info -->
+            <div class="song-info">
+                <h2 id="songTitle">Select a song</h2>
+                <p id="artistName">Artist name</p>
+            </div>
+
+            <!-- Audio Player -->
+            <audio id="audioPlayer" crossorigin="anonymous"></audio>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <span id="currentTime">0:00</span>
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <span id="duration">0:00</span>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="prevBtn" class="control-btn">⏮ Previous</button>
+                <button id="playBtn" class="control-btn play-btn">▶ Play</button>
+                <button id="nextBtn" class="control-btn">Next ⏭</button>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="volume-control">
+                <label for="volumeSlider">Volume:</label>
+                <input type="range" id="volumeSlider" min="0" max="100" value="70">
+                <span id="volumeDisplay">70%</span>
+            </div>
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist-section">
+            <h3>Playlist</h3>
+            <div id="playlistContainer" class="playlist-container">
+                <!-- Songs will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
